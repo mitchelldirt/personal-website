@@ -9,41 +9,121 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+		.skip {
+            font-weight: bold;
+		}
+		.tech-stack-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        .tech {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            border-bottom: 2px solid #ededed;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 1rem;
+
+            p, h3 {
+                margin: 0;
+                height: fit-content;
+            }
+
+            @media (max-width: 720px) {
+                h3 {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>👋🏻 Hello, Friend</h1>
+		<p class="skip">Skip ahead?</p>
+		<ul>
+		<li><a href="#about">About</a></li>
+		<li><a href="#work">Work</a></li>
+		<li><a href="#tech-stack">Tech Stack</a></li>
+		<li><a href="#learning">Learning</a></li>
+		<li><a href="#hobbies">Hobbies</a></li>
+		<ul>
+	    <li><a href="#rock-climbing">Rock Climbing</a></li>
+		<li><a href="#advocacy">Advocacy</a></li>
+		<li><a href="#board-games">Board Games</a></li>
+		<li><a href="#coding">Coding</a></li>
+        </ul>
+		</ul>
+			<h2 id="about">A little about me</h2>
 			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
+				My name is Mitchell Mudd and I'm a software developer and <a href="https://www.strongtowns.org/" target="_blank">Strong Towns advocate</a>. I live and work in the wonderful Holland Michigan in the United States. I'm passionate about building software that is easy to use, maintain, and understand. I'm always looking for new opportunities to learn and grow as a developer.
 			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+
+			<h2 id="work">What I'm working on</h2>
+            <p>At Tommy Car Wash Systems (where I currently work) I'm primarily working on <a href="https://shop.tommycarwash.com" target="_blank">our eCommerce website</a>. I'm working on a full theme redesign with good old HTML and SASS while adding additional functionality through extensions which use of jQuery, Backbone, and SuiteScript. Beyond that I integrate our various systems with Azure Cloud technologies using a mix of TypeScript, React, and Golang.</p>
+
+            <p>I'm also in college working to graduate with my associates in Computer Programming at Grand Rapids Community College in 2025. This is really exciting because it's allowing me to experience other ways of writing code that should expand my capabilities as a programmer.</p>
+
+            <h2 id="tech-stack">My favorite tech stack</h2>
+            <div class="tech-stack-container">
+            <div class="tech">
+                <h3>React</h3>
+                <p>My go to front end library. Combined with Vite I love how quickly I can prototype and content to show up in my browser. I'm a big fan of component based development and React is the most popular to it was an easy choice.</p>
+                </div>
+                <div class="tech">
+                <h3>Go</h3>
+                <p>While I definitely use Typescript for backend development I've been really into using Go lately. It's simplicity and incredible standard library makes me think less about the libraries I'll need to install and configure and more about the actual code. I'm still getting used to it and I'm really looking forward to using with a project at work.</p>
+                </div>
+                <div class="tech">
+                <h3>Typescript</h3>
+                <p>Javscript is the name of the game for front-end development, and I love the devtools and peace of mind that Typescript provides.</p>
+                </div>
+                <div class="tech">
+                <h3>PostreSQL</h3>
+                <p>I primarily do front-end development at work, but whenever I do backend dev I'll always reach for a relational database. Since my work primarily uses PostgreSQL I use it as well.</p>
+                </div>
+                <div class="tech">
+                <h3>Cypress + Vitest</h3>
+                <p>Cypress is fantastic for end-to-end testing and Vitest is Jest, but built for Vite and speed.</p>
+                </div>
+                <div class="tech">
+                <h3>Azure</h3>
+                <p>I use Azure at work and so that's the cloud provider that I'm comfortable with. AWS seems great too and given the chance I would definitely learn it.</p>
+                </div>
+                <div class="tech">
+                <h3>Python</h3>
+                <p>Python is my go to for quick scripts, one off data retrieval, and working with csv's. It's so fast for quick jobs where I'll use the code once and then either never use it again or reference it for future one-off jobs.</p>
+                </div>
+                <div class="tech">
+                <h3>Astro</h3>
+                <p>The website that you're looking at right now is built using Astro! I've really enjoyed using it to build this website and I see why people like it for content-focused websites.</p>
+                </div>
+            </div>
+
+            <h2 id="learning">What I'm learning</h2>
+<p>I'm primarily trying to improve my knowledge and abilities in my core tech stack when I'm not completely bogged down with work and school work. I'm also learning whatever my current college classes entail which for the fall 2024 semester will be Web App Development, Java, and C#.</p>
+
+            <h2 id="hobbies">My hobbies</h2>
+            <h3>Rock Climbing 🧗🏻‍♂️</h3>
+            <p>Rock climbing is my favorite hobby. I started climbing in 2020 in my home gym and have been lucky enough to travel to outdoor climbing locations a handful of times over the last few years. The exercise is fantastic and it helps me improve my problem solving abilities in a fun way, but the fantastic community is what it's all about!</p>
+
+            <h3>Advocacy 🚲</h3>
+            <p>I'm a passionate supporter of the <a href="https://www.strongtowns.org/" target="_blank">Strong Towns</a> movement. Their ideas resonate with me because I believe our current approach to city building is deeply flawed. We need to rethink how we develop our urban areas to create more sustainable and equitable communities.</p>
+
+            <p>Don't get me wrong—I think cars are an incredible invention and will always have their place. But in our cities, we've become far too dependent on them. That's why I love spreading the word about the benefits of biking and public transportation. Not only do these alternatives offer a sense of freedom, but they can also lead to significant financial savings.</p>
+
+            <p>By shifting our focus away from car-centric design, we can build cities that work better for everyone. It's about creating vibrant, walkable neighborhoods where people have real choices in how they get around.</p>
+
+            <h3>Board Games 🎲</h3>
+            <p>I love playing board games with my friends and family. A few of my favorites are Betrayal at House on the Hill, D&D, Wingspan, and Dutch Blitz. I love the social aspect of board games and how they can bring people together.</p>
+
+            <h3>Coding 👨🏻‍💻</h3>
+            <p>While software development is my profession, I also seek out enjoyable programming projects in my free time. When I find something I'm truly passionate about, it reinvigorates my enthusiasm for coding overall, including at work. I've noticed that these personal projects often translate into improved efficiency in my professional tasks. The skills and problem-solving approaches I develop during my free-time coding frequently prove valuable in my day job, creating a positive feedback loop between my work and hobby programming.</p>
+
 		</main>
 		<Footer />
 	</body>
