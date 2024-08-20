@@ -1,0 +1,62 @@
+---
+interface Props {
+	title: string;
+	description: string;
+	image: string;
+	link: string;
+}
+
+const { title, description, image, link } = Astro.props;
+---
+<a href={link}>
+<div>
+    <h2>
+        {title}
+    </h2>
+
+    <p>
+        {description}
+    </p>
+
+    <img src={image} alt="image of project" />
+</div>
+</a>
+<style>
+    a {
+        text-decoration: none;
+    }
+
+
+    div {
+        display: grid;
+        grid-template-rows: 1fr 4fr 5fr;
+        width: 300px;
+        height: 350px;
+        gap: 10px;
+        border: 6px solid #2e8555;
+
+        h2 {
+            margin: 0;
+            font-weight: bold;
+            font-size: 24px;
+            padding: 10px 10px;
+            height: fit-content;
+            text-decoration: none;
+            color: #000000;
+        }
+
+        p {
+            margin: 0;
+            font-size: 14px;
+            padding: 0px 10px;
+            text-decoration: none;
+            color: #000000;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+    }
+</style>
