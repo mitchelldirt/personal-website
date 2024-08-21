@@ -55,7 +55,7 @@ export const projects: Project[] = [
     longDescription:
       "This project is a simple stocks app that fetches stock data from the Finage API. It uses the Vite build tool and the React framework. The app fetches stock data from the Finage API and displays it in a table. The app also has a search bar that allows users to search for a specific stock by symbol.",
     image: "/windmill-weather.png",
-    link: "/tasky/windmill-weather",
+    link: "/projects/windmill-weather",
     github: "",
     liveLink: "https://stocks.mitchellmudd.com",
     tech: [techIcons.react],

@@ -24,8 +24,8 @@ const { title, description, image, link } = Astro.props;
 <style>
     a {
         text-decoration: none;
+        height: 370px;
     }
-
 
     div {
         display: grid;
@@ -34,6 +34,7 @@ const { title, description, image, link } = Astro.props;
         height: 350px;
         gap: 10px;
         border: 6px solid #2e8555;
+        transition: 0.4s;
 
         h2 {
             margin: 0;
@@ -52,6 +53,11 @@ const { title, description, image, link } = Astro.props;
             text-decoration: none;
             color: #000000;
         }
+    }
+
+    div:hover {
+        border-top: 20px solid #2e8555;
+        transition: 0.7s;
     }
 
     img {
