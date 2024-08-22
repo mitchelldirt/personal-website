@@ -3,6 +3,8 @@ import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+
 type Props = CollectionEntry<'project'>['data'];
 
 const { title, shortDescription, longDescription, image, github, liveLink, tech } = Astro.props;
@@ -17,6 +19,18 @@ const { title, shortDescription, longDescription, image, github, liveLink, tech 
 				max-width: 100%;
 				margin: 0;
 			}
+
+			.btn-container {
+                display: flex;
+                justify-content: space-around;
+			}
+
+			.tech-wrapper, .tech-container {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 10px;
+			}
 		</style>
 	</head>
 
@@ -24,6 +38,20 @@ const { title, shortDescription, longDescription, image, github, liveLink, tech 
 		<Header />
 		<main>
 		  <h1>{title}</h1>
+		  <img src={image} alt="image of the current project" />
+		  <div class="btn-container">
+				<a href={liveLink}>Live Link</a>
+				<a href={github}>Github</a>
+		  </div>
+		  <div class="tech-wrapper">
+			  <p>Tech: </p>
+			  <div class="tech-container">
+				  {tech.map((tech) => {
+						return <span>{tech}</span>;
+                    })}
+		      </div>
+		  </div>
+		<p>{longDescription}</p>
 		</main>
 		<Footer />
 	</body>

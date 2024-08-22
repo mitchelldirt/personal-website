@@ -8,5 +8,5 @@ image: "/city-ranker.png"
 link: "/projects/city-ranker"
 github: ""
 liveLink: "https://stocks.mitchellmudd.com"
-tech: ["react"]
+tech: ["react", "vite"]
 ---
